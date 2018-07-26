@@ -10,8 +10,83 @@
 
 <body>
     <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            position: relative
+        }
+
+        .container {
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #list {
+            list-style: none;
+            margin: 4px auto 10px auto;
+            position: absolute;
+            top: 25px;
+            left: 15%;
+            display: none;
+            padding: 4px;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        }
+
+        li:hover {
+            background: darkslategray;
+            color: white;
+            cursor: pointer;
+            transition: all .5s;
+        }
+
+        .selected-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card-container {
+            height: 250px;
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            margin: 10px;
+        }
     </style>
 
+    <div class="container">
+        <h1>Try Typing...</h1>
+        <div class="input-container">
+            <input type="text">
+            <ul id="list"></ul>
+        </div>
+        <div class="selected-container">
+        </div>
+    </div>
+
 </body>
+
+<script>
+</script>
 
 </html>
