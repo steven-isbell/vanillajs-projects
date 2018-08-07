@@ -84,6 +84,41 @@
 </body>
 
 <script>
+    const selected = [];
+    const search = document.querySelector('input');
+    const list = document.getElementById('list');
+
+    function filterText() {
+        if (!this.value) {
+            list.innerHTML = "";
+            list.style.display = 'none';
+            return;
+        }
+        const filtered = characters
+            .filter(val => val.name.toLowerCase().includes(this.value.toLowerCase()) && selected.findIndex(val => val.toLowerCase().includes(this.value.toLowerCase())) === -1)
+            .map(val => `<li onclick="handleSelect(this.innerText)">${val.name}</li>`);
+        if (filtered.length) {
+            list.style.display = 'block';
+            render(filtered, list)
+        }
+    }
+
+    function handleSelect(e) {
+        const selectedContainer = document.querySelector('.selected-container');
+        const search = document.querySelector('input');
+        const chosenOne = characters.filter(val => val.name === e)[0];
+        selected.push(`<div class="card-container"><h2>${chosenOne.name}</h2></div>`)
+        search.value = '';
+        list.style.display = 'none';
+        render(selected, selectedContainer);
+    }
+
+    function render(data, container) {
+        const html = data.join('');
+        container.innerHTML = html;
+    }
+
+    search.addEventListener('keyup', filterText);
 </script>
 
 </html>
