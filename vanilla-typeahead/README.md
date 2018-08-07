@@ -71,7 +71,7 @@ In this step, we'll make our data appear on the page. To dynamically add content
 
 <details>
 
-<summary> <code> ./src/App.js ( updatePrice method ) </code> </summary>
+<summary> <code> ./index.html </code> </summary>
 
 ```js
 const characters = [];
