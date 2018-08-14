@@ -107,7 +107,7 @@ We can now see data on the view, but it's not very dynamic. Let's get our typeah
   * Write a function called `filterText`
     * When we attach this method to our input, we'll gain access to a property called `this.value` where `this` is bound to our input. So, `this.value` would be the value of our keypress.
     * In our `filterText` function, declare a variable called filtered.
-      * First we want to filter through our `characters` array to search each name for the character that has been typed in.
+      * First we want to filter through our `characters` array to search each name for the character that has been typed in. (Hint: Normalize the characters by making both the value and term lowercase)
       * We can then grab our map from the previous step and chain it to our filter to build the HTML we want to show. (Remove the join method, we'll use that later.)
     * Next, add a condtional to check that our `filtered` has at least one value.
       * If it does, invoke the render method passing in our `filtered` array.
