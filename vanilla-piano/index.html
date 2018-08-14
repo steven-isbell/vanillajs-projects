@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Drums</title>
+    <title>Vanilla Piano</title>
 </head>
 
 <body>
@@ -100,10 +100,10 @@
     window.addEventListener('keydown', (e) => {
         console.log(`audio[data-key="${e.keyCode}"]`);
         const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        if (!audio) return;
         console.log('audio: ', audio);
         const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
         console.log('key: ', key);
-        if (!audio) return;
         audio.currentTime = 0;
         key.classList.add('active')
         audio.play();
