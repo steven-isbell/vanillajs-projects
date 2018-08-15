@@ -1,1 +1,1 @@
-# VanillaJS Shadow Effect
+# VanillaJS Mouse Effect
