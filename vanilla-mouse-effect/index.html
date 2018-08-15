@@ -5,15 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mouse Effect</title>
+    <title>Mouse Party</title>
 </head>
 
 <body>
     <style>
-    </style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: #222;
+            font-family: cursive
+        }
 
+        #wrap {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #wrap * {
+            pointer-events: none;
+        }
+
+        #wrap h1 {
+            color: rgba(255, 255, 255, .5);
+            font-size: 5rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .ball {
+            position: absolute;
+            border-radius: 50%;
+            animation: shrink 1s ease-in-out both;
+            opacity: .5;
+        }
+
+        @keyframes shrink {
+            100% {
+                transform: scale(0)
+            }
+        }
+    </style>
+    <div id="wrap">
+        <h1>Party Time!</h1>
+    </div>
 </body>
 
-<script></script>
+<script>
+
+    const mousePosition = {};
+    let drawId;
+
+    const getRandomNumber = (min, max) => Math.round(Math.random() * (max - min + 1)) + min;
+
+    window.addEventListener('mousemove', e => {
+        mousePosition.x = e.pageX;
+        mousePosition.y = e.pageY;
+    });
+
+
+    const draw = () => setInterval(() => {
+        if (mousePosition.x > 0 && mousePosition.y > 0) {
+            const container = document.getElementById('wrap');
+            const color = `background:rgb(${getRandomNumber(0, 255)},${getRandomNumber(0, 255)}, ${getRandomNumber(0, 255)});`;
+            const ballSize = getRandomNumber(10, 30);
+            const size = `height:${ballSize}px; width:${ballSize}px;`;
+            const left = `left:${getRandomNumber(mousePosition.x - ballSize, mousePosition.x)}px;`;
+            const top = `top:${getRandomNumber(mousePosition.y - ballSize, mousePosition.y)}px; `;
+            const style = `${left}${top}${color}${size}`;
+
+            const ball = document.createElement('div');
+
+            ball.innerHTML = `<div class='ball' style="${style}"></div>`
+            ball.addEventListener("animationend", function () { this.remove() })
+
+            container.appendChild(ball);
+        }
+    }, 1);
+
+    window.addEventListener('mouseover', () => drawId = draw());
+
+    window.addEventListener('mouseout', () => clearInterval(drawId));
+
+</script>
 
 </html>
