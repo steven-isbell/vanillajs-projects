@@ -160,7 +160,7 @@ window.addEventListener('keypress', (e) => {
     if (!tone) return;
     const pianoKey = document.querySelector(`.pianoKey[data-key="${e.keyCode}"]`);
     tone.currentTime = 0;
-    pianoKey.classList.add('pressed')
+    pianoKey.classList.add('pressed');
     tone.play();
     setTimeout(() => pianoKey.classList.remove('pressed'), 300);
 });
