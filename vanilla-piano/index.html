@@ -68,6 +68,10 @@
             align-items: center;
             justify-content: center;
         }
+
+        p {
+            text-transform: lowercase;
+        }
     </style>
     <main>
         <div class="legend">
@@ -101,25 +105,25 @@
         </div>
 
         <svg height="230">
-            <polygon points="200,10 230,10 230,100 245,100 245,220 200,220 200,10" class="white pianoKey" data-key="65" />
-            <polygon points="245,100 260,100 260,10 275,10 275,100 290,100 290,220 245,220 245,100" class="white pianoKey" data-key="83"
+            <polygon points="200,10 230,10 230,100 245,100 245,220 200,220 200,10" class="white pianoKey" data-key="97" />
+            <polygon points="245,100 260,100 260,10 275,10 275,100 290,100 290,220 245,220 245,100" class="white pianoKey" data-key="115"
             />
-            <polygon points="305,10 335,10 335,220 290,220 290,100 305,100 305,10" class="white pianoKey" data-key="68" />
-            <polygon points="335,10 365,10 365,100 380,100 380,220 335,220 335,10" class="white pianoKey" data-key="70" />
-            <polygon points="380,100 395,100 395,10 410,10 410,100 425,100 425,220 380,220 380,100" class="white pianoKey" data-key="71"
+            <polygon points="305,10 335,10 335,220 290,220 290,100 305,100 305,10" class="white pianoKey" data-key="100" />
+            <polygon points="335,10 365,10 365,100 380,100 380,220 335,220 335,10" class="white pianoKey" data-key="102" />
+            <polygon points="380,100 395,100 395,10 410,10 410,100 425,100 425,220 380,220 380,100" class="white pianoKey" data-key="103"
             />
-            <polygon points="425,100 440,100 440,10 455,10 455,100 470,100 470,220 425,220 425,100" class="white pianoKey" data-key="72"
+            <polygon points="425,100 440,100 440,10 455,10 455,100 470,100 470,220 425,220 425,100" class="white pianoKey" data-key="104"
             />
-            <polygon points="470,100 485,100 485,10 515,10 515,220 470,220 470,100" class="white pianoKey" data-key="74" />
-            <polygon points="515,10 545,10 545,100 560,100 560,220 515,220 515,10" class="white pianoKey" data-key="82" />
-            <polygon points="560,100 575,100 575,10 590,10 590,100 605,100 605,220 560,220" class="white pianoKey" data-key="84" />
-            <polygon points="605,100 620,100 620,10 650,10 650,220 605,220 605,100" class="white pianoKey" data-key="89" />
-            <polygon points="650,10 680,10 680,100 695,100 695,220 650,220 650,10" class="white pianoKey" data-key="85" />
-            <polygon points="695,100 710,100 710,10 725,10 725,100 740,100 740,220 695,220 695,100" class="white pianoKey" data-key="73"
+            <polygon points="470,100 485,100 485,10 515,10 515,220 470,220 470,100" class="white pianoKey" data-key="106" />
+            <polygon points="515,10 545,10 545,100 560,100 560,220 515,220 515,10" class="white pianoKey" data-key="114" />
+            <polygon points="560,100 575,100 575,10 590,10 590,100 605,100 605,220 560,220" class="white pianoKey" data-key="116" />
+            <polygon points="605,100 620,100 620,10 650,10 650,220 605,220 605,100" class="white pianoKey" data-key="121" />
+            <polygon points="650,10 680,10 680,100 695,100 695,220 650,220 650,10" class="white pianoKey" data-key="117" />
+            <polygon points="695,100 710,100 710,10 725,10 725,100 740,100 740,220 695,220 695,100" class="white pianoKey" data-key="105"
             />
-            <polygon points="740,100 755,100 755,10 770,10 770,100 785,100 785,220 740,220 740,100" class="white pianoKey" data-key="79"
+            <polygon points="740,100 755,100 755,10 770,10 770,100 785,100 785,220 740,220 740,100" class="white pianoKey" data-key="111"
             />
-            <polygon points="785,100 800,100 800,10 830,10 830,220 785,220 785,100" class="white pianoKey" data-key="80" />
+            <polygon points="785,100 800,100 800,10 830,10 830,220 785,220 785,100" class="white pianoKey" data-key="112" />
             <polygon points="230,10 260,10 260,100 230,100 230,10" class="black pianoKey" data-key="49" />
             <polygon points="275,10 305,10 305,100 275,100 275,10" class="black pianoKey" data-key="50" />
             <polygon points="365,10 395,10 395,100 365,100 365,10" class="black pianoKey" data-key="51" />
@@ -132,30 +136,30 @@
             <polygon points="770,10 800,10 800,100 770,100 770,10" class="black pianoKey" data-key="48" />
         </svg>
 
-        <audio data-key="65" src="/pianoSounds/middle_c.mp3"></audio>
-        <audio data-key="49" src="/pianoSounds/mid_c_sharp.mp3"></audio>
-        <audio data-key="83" src="/pianoSounds/middle_d.mp3"></audio>
-        <audio data-key="50" src="/pianoSounds/mid_d_sharp.mp3"></audio>
-        <audio data-key="68" src="/pianoSounds/middle_e.mp3"></audio>
-        <audio data-key="70" src="/pianoSounds/middle_f.mp3"></audio>
-        <audio data-key="51" src="/pianoSounds/mid_f_sharp.mp3"></audio>
-        <audio data-key="71" src="/pianoSounds/middle_g.mp3"></audio>
-        <audio data-key="52" src="/pianoSounds/mid_g_sharp.mp3"></audio>
-        <audio data-key="72" src="/pianoSounds/middle_a.mp3"></audio>
-        <audio data-key="53" src="/pianoSounds/mid_a_sharp.mp3"></audio>
-        <audio data-key="74" src="/pianoSounds/middle_b.mp3"></audio>
-        <audio data-key="82" src="/pianoSounds/high_c.mp3"></audio>
-        <audio data-key="54" src="/pianoSounds/high_c_sharp.mp3"></audio>
-        <audio data-key="84" src="/pianoSounds/high_d.mp3"></audio>
-        <audio data-key="55" src="/pianoSounds/high_d_sharp.mp3"></audio>
-        <audio data-key="89" src="/pianoSounds/high_e.mp3"></audio>
-        <audio data-key="85" src="/pianoSounds/high_f.mp3"></audio>
-        <audio data-key="56" src="/pianoSounds/high_f_sharp.mp3"></audio>
-        <audio data-key="73" src="/pianoSounds/high_g.mp3"></audio>
-        <audio data-key="57" src="/pianoSounds/high_g_sharp.mp3"></audio>
-        <audio data-key="79" src="/pianoSounds/high_a.mp3"></audio>
-        <audio data-key="48" src="/pianoSounds/high_a_sharp.mp3"></audio>
-        <audio data-key="80" src="/pianoSounds/high_b.mp3"></audio>
+        <audio data-key="97" src="./pianoSounds/middle_c.mp3"></audio>
+        <audio data-key="49" src="./pianoSounds/mid_c_sharp.mp3"></audio>
+        <audio data-key="115" src="./pianoSounds/middle_d.mp3"></audio>
+        <audio data-key="50" src="./pianoSounds/mid_d_sharp.mp3"></audio>
+        <audio data-key="100" src="./pianoSounds/middle_e.mp3"></audio>
+        <audio data-key="102" src="./pianoSounds/middle_f.mp3"></audio>
+        <audio data-key="51" src="./pianoSounds/mid_f_sharp.mp3"></audio>
+        <audio data-key="103" src="./pianoSounds/middle_g.mp3"></audio>
+        <audio data-key="52" src="./pianoSounds/mid_g_sharp.mp3"></audio>
+        <audio data-key="104" src="./pianoSounds/middle_a.mp3"></audio>
+        <audio data-key="53" src="./pianoSounds/mid_a_sharp.mp3"></audio>
+        <audio data-key="106" src="./pianoSounds/middle_b.mp3"></audio>
+        <audio data-key="114" src="./pianoSounds/high_c.mp3"></audio>
+        <audio data-key="54" src="./pianoSounds/high_c_sharp.mp3"></audio>
+        <audio data-key="116" src="./pianoSounds/high_d.mp3"></audio>
+        <audio data-key="55" src="./pianoSounds/high_d_sharp.mp3"></audio>
+        <audio data-key="121" src="./pianoSounds/high_e.mp3"></audio>
+        <audio data-key="117" src="./pianoSounds/high_f.mp3"></audio>
+        <audio data-key="56" src="./pianoSounds/high_f_sharp.mp3"></audio>
+        <audio data-key="105" src="./pianoSounds/high_g.mp3"></audio>
+        <audio data-key="57" src="./pianoSounds/high_g_sharp.mp3"></audio>
+        <audio data-key="111" src="./pianoSounds/high_a.mp3"></audio>
+        <audio data-key="48" src="./pianoSounds/high_a_sharp.mp3"></audio>
+        <audio data-key="112" src="./pianoSounds/high_b.mp3"></audio>
     </main>
 
 </body>
