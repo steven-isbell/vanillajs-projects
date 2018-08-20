@@ -1,1 +1,0 @@
-# VanillaJS Mouse Effect
