@@ -44,17 +44,21 @@ const getRandomNumber = (min, max) => Math.round(Math.random() * (max - min + 1)
 
 ### Summary
 
-In this step, we'll setup our application by declaring a new event listener and assigning the functionality. We want to listen for any keypress that occurs anywhere on our page. For this, we need to attach an event to the window.
+In this step, we'll add a way for our application to `listen` for the mouse to move. We'll then capture the mouse position each time the mouse is moved so we know where to place our dots.
 
 ### Instructions
 
 * Open `index.html`.
-* Locate the opening and closing `script` tags.
-* In between the `script tags` declare a new event listener on our window object and provide it two arguments, the event to listen for and the handler to fire once that event has occured.
-    * Add a single argument to the handler that will represent our `event`
-    * The `event` argument is implicitly passed with information about the keypress event that occurred.
-    * One piece of information that will be passed along will be the `keyCode` of the key that was pressed.
-    * This `keyCode` will correlate with the `data-key` attribute assigned to our poylgons and audio tags.
+* Beneath our `getRandomNumber` function, add a new event listener.
+    * The listener should be attached to the window.
+    * It should listen for the `mousemove` event.
+        * Attaching to the `window` and listening for `mousemove` will allow us to fire a callback function anytime the mouse is moved in the browser window.
+    * Add a callback function to the listener.
+        * The callback should receive a single argument that represents the `event` object.
+        * The `event` object will contain information regarding the `mousemove` event, specifically the coordinates of our mouse.
+        * Update the x and y values of our `mousePosition` object with the `pageX` and `pageY` respectively, of the `event`.
+        * Feel free to console log the event values to see what happens when you move the mouse.
+* We now know, programatically the location of our mouse. Now we can add items to follow it!
 
 ### Solution
 
@@ -63,9 +67,15 @@ In this step, we'll setup our application by declaring a new event listener and 
 <summary> <code> ./index.html </code> </summary>
 
 ```js
-window.addEventListener('keypress', (e) => {
+const mousePosition = {};
+    let drawId;
 
-});
+    const getRandomNumber = (min, max) => Math.round(Math.random() * (max - min + 1)) + min;
+
+    window.addEventListener('mousemove', e => {
+        mousePosition.x = e.pageX;
+        mousePosition.y = e.pageY;
+    });
 
 ```
 

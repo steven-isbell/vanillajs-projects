@@ -7,6 +7,10 @@ In this project, we'll provide three JavaScript applications to help improve you
 * `Fork` this repository.
 * `Clone` your fork.
 * Select a project you would like to begin with and navigate into that directory.
+    * For the best experience, the projects should be done in the following order
+        * vanilla-typeahead
+        * vanilla-piano
+        * vanilla-mouse-party
 * Open the `index.html` file in your browser using either `live-server` or simply opening the file.
     * If you want to use `live-server`, run `npm i -g live-server` and run it in the command line within the project folder.
 * Complete each project according to its associated `README` and move on to the next.
