@@ -59,16 +59,11 @@
 
 <script>
 
-    const mousePosition = {};
-    let drawId;
-
-    const getRandomNumber = (min, max) => Math.round(Math.random() * (max - min + 1)) + min;
 
     window.addEventListener('mousemove', e => {
         mousePosition.x = e.pageX;
         mousePosition.y = e.pageY;
     });
-
 
     const draw = () => setInterval(() => {
         if (mousePosition.x > 0 && mousePosition.y > 0) {

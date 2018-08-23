@@ -2,38 +2,44 @@
 
 # Project Summary
 
-The goal of this project is to build a functional piano that can be played using your computers keys. You don't need to worry about setting up the piano, the keys, or the sounds, all of that has been provided for you. Your goal will be making the piano work when the keys are pressed.
-
+The goal of this project is to build a collection of randomly appearing and disappearing dots that will follow your mouse movement. They will have random colors and sizes. When we're finished, we'll have the appearance of color popping balls following your mouse arround the screen.
 ## Step 1
 
 ### Summary
 
-Begin by examining the exisiting code. You'll notice that our piano is a Scalable Vector Graphic (SVG); you can find more information on SVG's <a href="https://www.w3schools.com/graphics/svg_intro.asp">here</a>.
+Let's begin by setting up a couple of environment variables. These will be variables or functions that we need to make the rest of the application work.
 
 ### Instructions
 
 * Open `./index.html`.
-* Locate the opening and closing `svg` tags.
-    * Each polygon in our SVG represents a key, either black or white.
-    * Each key has either a `white` or `black` class and a `pianoKey` class for ease of working with the elements.
-* Locate the audio tags
-    * audio tags are hidden tags that allow us to play audio in our page.
-    * Each audio tag has a src that tells it what audio to play.
-    * We'll use javascript to tell it when to play.
-    * For more information on using audio tags, read <a href="https://www.w3schools.com/tags/ref_av_dom.asp">this</a>.
-* Each polygon (pianoKey) has an associated audio tag.
-    * These are tied together by the data-key property.
-    * data-key is a custom html attribute that allows us to store data to HTML elements. You can find more on them <a href="https://www.w3schools.com/tags/att_global_data.asp">here</a>.
-    * You can access the data-key attribute by targeting the element using `querySelector` and accessing the `data-key` property using bracket notation.
-        <details>
-        <summary><code> Example </code></summary>
-        ```js
-            // Here we're accessing the audio element with a data-key property of 65
+* Locate the opening and closing `script` tags.
+    * We'll need a way to keep track of our mouse position.
+        * create a variable called `mousePosition` and set it equal to an object.
+        * Provide it a `x` and a `y` property, both initialized as 0.
+    * Next, add an undefined variable called `drawId`.
+        * We'll use this variable to keep track of when the dots should be on or off the screen.
+    * We'll also need a function to handle the randomizing of the color, positioning, and size of our dots.
+        * Add this code beneath the `drawId` variable created above.
+            ```js
+                const getRandomNumber = (min, max) => Math.round(Math.random() * (max - min + 1)) + min;
+            ```
 
-            const element = document.querySelector('audio[data-key="65"]');
-        ```
-        </details>
-_You now know everything you need to get this piano working!_
+### Solution
+
+<details>
+
+<summary> <code> ./index.html </code> </summary>
+
+```js
+const mousePosition = {};
+let drawId;
+
+const getRandomNumber = (min, max) => Math.round(Math.random() * (max - min + 1)) + min;
+
+```
+
+</details>
+
 ## Step 2
 
 ### Summary

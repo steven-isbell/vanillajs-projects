@@ -2,7 +2,7 @@
 
 # Project Summary
 
-The goal of this project is to build a functional piano that can be played using your computers keys. You don't need to worry about setting up the piano, the keys, or the sounds, all of that has been provided for you. Your goal will be making the piano work when the keys are pressed.
+The goal of this project is to build a functional piano that can be played using your computers keys. You don't need to worry about setting up the piano, the keys, or the sounds, all of that has been provided for you. Your goal will be making the piano work when their respective keys are pressed.
 
 ## Step 1
 
