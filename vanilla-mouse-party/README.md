@@ -85,7 +85,7 @@ const mousePosition = {};
 
 ### Summary
 
-In this step we'll get access to the visual key that was pressed (the unique polygon) and it's associated audio tag. As mentioned before, they share a unique `data-key` attribute.
+In this step we'll take advantage of the built-in `setInterval` method to handle the creation and destruction of our dots on the page. We'll build our dots, randomize the size and color, and animate it so it disappears.
 
 ### Instructions
 
