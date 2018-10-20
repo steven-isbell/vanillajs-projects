@@ -16,7 +16,7 @@ Begin by examining the exisiting code. You'll notice that our piano is a Scalabl
 * Locate the opening and closing `svg` tags.
     * Each polygon in our SVG represents a key, either black or white.
     * Each key has either a `white` or `black` class and a `pianoKey` class for ease of working with the elements.
-* Locate the audio tags
+* Locate the audio tags.
     * audio tags are hidden tags that allow us to play audio in our page.
     * Each audio tag has a src that tells it what audio to play.
     * We'll use javascript to tell it when to play.
@@ -45,7 +45,7 @@ In this step, we'll setup our application by declaring a new event listener and 
 * Open `index.html`.
 * Locate the opening and closing `script` tags.
 * In between the `script tags` declare a new event listener on our window object and provide it two arguments, the event to listen for and the handler to fire once that event has occured.
-    * Add a single argument to the handler that will represent our `event`
+    * Add a single argument to the handler that will represent our `event`.
     * The `event` argument is implicitly passed with information about the keypress event that occurred.
     * One piece of information that will be passed along will be the `keyCode` of the key that was pressed.
     * This `keyCode` will correlate with the `data-key` attribute assigned to our poylgons and audio tags.
