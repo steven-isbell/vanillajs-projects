@@ -17,8 +17,8 @@ To begin, we need data to search through. While there are many ways to interact 
 * We'll write all of our JavaScript between these tags.
 * Between the script tags, declare a variable called characters and set its value to an empty array.
 * Using `fetch` make a request to the SWAPI API at `/api/people`s and store the resulting data in the people array.
-  * Usage of the fetch API can be found <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">here</a>
-  * Usage of the SWAPI API can be found <a href="https://www.swapi.co">here</a>
+  * Usage of the fetch API can be found <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">here.</a>
+  * Usage of the SWAPI API can be found <a href="https://www.swapi.co">here.</a>
 
 ### Solution
 
@@ -41,7 +41,7 @@ fetch('https://www.swapi.co/api/people')
 
 ### Summary
 
-In this step, we'll make our data appear on the page. To dynamically add content to the view we need to target DOM nodes. DOM nodes are object representations of our HTML structure. There are several ways to access DOM Nodes including: `getElementById`, `getElementsByClassName`, `querySelector`, and `querySelectorAll`. You can find a summary of those methods <a href="https://www.digitalocean.com/community/tutorials/how-to-access-elements-in-the-dom">here</a>
+In this step, we'll make our data appear on the page. To dynamically add content to the view we need to target DOM nodes. DOM nodes are object representations of our HTML structure. There are several ways to access DOM Nodes including: `getElementById`, `getElementsByClassName`, `querySelector`, and `querySelectorAll`. You can find a summary of those methods <a href="https://www.digitalocean.com/community/tutorials/how-to-access-elements-in-the-dom">here.</a>
 
 ### Instructions
 
@@ -104,10 +104,10 @@ We can now see data on the view, but it's not very dynamic. Let's get our typeah
 * Open `index.html`.
 * Declare a variable called `search` beneath our `list` variable who's value is our `input` element.
 * Now that we have access to the input, we need a way to access the value we type into it.
-  * Write a function called `filterText`
+  * Write a function called `filterText`.
     * When we attach this method to our input, we'll gain access to a property called `this.value` where `this` is bound to our input. So, `this.value` would be the value of our keypress.
     * In our `filterText` function, declare a variable called filtered.
-      * First we want to filter through our `characters` array to search each name for the character that has been typed in. (Hint: Normalize the characters by making both the value and term lowercase)
+      * First we want to filter through our `characters` array to search each name for the character that has been typed in. (Hint: Normalize the characters by making both the value and term lowercase.)
       * We can then grab our map from the previous step and chain it to our filter to build the HTML we want to show. (Remove the join method, we'll use that later.)
     * Next, add a condtional to check that our `filtered` has at least one value.
       * If it does, invoke the render method passing in our `filtered` array.
@@ -116,7 +116,7 @@ We can now see data on the view, but it's not very dynamic. Let's get our typeah
       * Remove the `render` invocation from the `.then` above.
     * Finally, we need to utilize our `filterText` method.
       * We'll add an `eventListener` that will tell our input to listen for an event to occur.
-      * For more information on available events, look <a href="https://developer.mozilla.org/en-US/docs/Web/Events">here</a>
+      * For more information on available events, look <a href="https://developer.mozilla.org/en-US/docs/Web/Events">here.</a>
       * At the bottom of our `script` add a `keyup eventListener` to our `search` Node that will execute our `filterText` method.
         * When we type into our typeahead, on each `keyup` our `filterText` method will be reinvoked.
 
