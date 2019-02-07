@@ -27,11 +27,13 @@ Begin by examining the exisiting code. You'll notice that our piano is a Scalabl
     * You can access the data-key attribute by targeting the element using `querySelector` and accessing the `data-key` property using bracket notation.
         <details>
         <summary><code> Example </code></summary>
+
         ```js
             // Here we're accessing the audio element with a data-key property of 65
 
             const element = document.querySelector('audio[data-key="65"]');
         ```
+
         </details>
 _You now know everything you need to get this piano working!_
 ## Step 2

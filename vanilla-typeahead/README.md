@@ -58,11 +58,13 @@ In this step, we'll make our data appear on the page. To dynamically add content
     * Your code should look like this.
       <details>
       <summary><code> html </code></summary>
+
       ```js
         function render() {
-          const html = characters.map(val => `<li>${val.name}</li>`).join('')
+          const html = characters.map(val => `<li> ${val.name} </li>`).join('');
         }
       ```
+
       </details>
     * We can now render that content to the DOM by targeting the `innerHTML` of our `list` and setting its value to our html.
     * Invoke render in the `.then` after we push our characters into our array.
