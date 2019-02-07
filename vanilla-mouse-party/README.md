@@ -90,13 +90,13 @@ In this step we'll take advantage of the built-in `setInterval` (more on that <a
 ### Instructions
 
 * Open `index.html`.
-* Beneath our `mousemove` event listener
+* Beneath our `mousemove` event listener.
     * Create a new function called draw.
     * It should return a `setInterval`.
     * `setInterval` accepts two arguments, a callback and an interval in milliseconds for how often we'll invoke the callback.
         * The interval we use will determine how quickly our dots are added to the page.
             * Feel free to play around with this number after everything is working to see it's effects.
-        * In the callback in `setInterval`
+        * In the callback in `setInterval`:
             * We have a `div` with an id of `wrap`. We'll want all of our dots to live in that container.
                 * Create a variable called `container` whose value is our `wrap` element.
                 * Add the following code beneath your new variable. This is the code that will style our dots. Feel free to examine it.
@@ -109,12 +109,12 @@ In this step we'll take advantage of the built-in `setInterval` (more on that <a
                         const style = `${left}${top}${color}${size}`;
                     ```
                 * Next, we need to add dots and apply our styles from above each time our callback is executed.
-                    * Create a new `div` element and store it to a variable called `ball`
+                    * Create a new `div` element and store it to a variable called `ball`.
                     * Add the class `ball` to our `ball` element using it's `classList`.
                     * Set the `ball` elements style to the `style` variable from above.
                 * Finally, we need to add the new `ball` element to our `container` element and remove it once it's animation is complete.
                     * Add an `animationend` event listener to our `ball` element.
-                    * The callback function should invoke `this.remove()` to remove the element once it's animation is complete. (remember, using an arrow function will alter the context)
+                    * The callback function should invoke `this.remove()` to remove the element once it's animation is complete. (remember, using an arrow function will alter the context.)
                     * Append the `ball` element to the `container` element.
 
 ### Solution
@@ -164,7 +164,7 @@ In this step we'll start our interval by creating an event listener that will li
 ### Instructions
 
 * Open `index.html`.
-* Beneath our `draw` variable
+* Beneath our `draw` variable:
     * Create a new event listener on the window that will listen for a `mouseover` event.
     * The callback should invoke our `draw` function and store the resulting id to our `drawId` variable.
     * We'll use the `drawId` to cancel the interval anytime our mouse moves out of the window.
